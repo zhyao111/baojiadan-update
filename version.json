@@ -6,7 +6,7 @@
     "password": "6fd7"
   },
   "backup": {
-    "url": "https://github.com/zhyao111/chefeibao-update/releases/download/v1.0.0/app-debug.apk"
+    "url": "https://github.com/zhyao111/baojiadan-update/releases/download/v1.0.0/app-debug.apk"
   },
   "note": "首个正式版本，兼容 OPPO A53/低版本安卓 WebView 的滑动问题"
 }
