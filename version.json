@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "versionCode": 1,
+  "primary": {
+    "url": "https://wwaqd.lanzoum.com/i3aY93vdx5vc",
+    "password": "6fd7"
+  },
+  "backup": {
+    "url": ""
+  },
+  "note": "首个正式版本，兼容 OPPO A53/低版本安卓 WebView 的滑动问题"
+}
