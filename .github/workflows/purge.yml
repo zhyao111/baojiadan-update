@@ -1,10 +1,15 @@
-name: Purge jsDelivr Cache
+name: Sync & Purge
 on:
   push:
     branches: [main]
 jobs:
-  purge:
+  sync-gitee:
     runs-on: ubuntu-latest
     steps:
+      - name: Sync to Gitee
+        run: |
+          curl -sS -X POST "https://gitee.com/api/v5/repos/zhyao333/baojiadan-update/force-sync" \
+            -H "Content-Type: application/json" \
+            -d '{"access_token":"${{ secrets.GITEE_TOKEN }}"}'
       - name: Purge jsDelivr
         run: curl -sS "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/version.json"
