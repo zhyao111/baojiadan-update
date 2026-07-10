@@ -6,10 +6,15 @@ jobs:
   sync-gitee:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
       - name: Sync to Gitee
         run: |
-          curl -sS -X POST "https://gitee.com/api/v5/repos/zhyao333/baojiadan-update/force-sync" \
-            -H "Content-Type: application/json" \
-            -d '{"access_token":"${{ secrets.GITEE_TOKEN }}"}'
+          cd $GITHUB_WORKSPACE
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git remote add gitee "https://oauth2:${{ secrets.GITEE_TOKEN }}@gitee.com/zhyao333/baojiadan-update.git"
+          git push --force gitee main:master
       - name: Purge jsDelivr
         run: curl -sS "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/version.json"
