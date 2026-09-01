@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "versionCode": 3,
-  "url": "https://github.com/zhyao111/baojiadan-update/releases/download/v1.0.2/app-debug.apk",
-  "note": "修复加投后费率未同步、点计算时加投结果被旧费率覆盖的问题"
+  "version": "1.0.3",
+  "versionCode": 4,
+  "url": "https://github.com/zhyao111/baojiadan-update/releases/download/v1.0.3/app-debug.apk",
+  "note": "修复加投不生效：改其他值后加投不再丢失/重复累加"
 }
